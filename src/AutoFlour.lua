@@ -47,7 +47,7 @@ RunThread(function()
             for _,t in pairs(bots[1]:GetWorld():GetTiles()) do
                 if t.fg == 4582 then
                     bots[1]:FindPath(t.pos_x,t.pos_y-1)
-		            Sleep(interval)
+		    Sleep(interval)
                     bots[1]:PlaceTile(t.pos_x,t.pos_y,880)
                     Sleep(1000)
                 end
@@ -56,14 +56,14 @@ RunThread(function()
             for _,t in pairs(bots[1]:GetWorld():GetTiles()) do
                 if t.fg == 2978 then
                     bots[1]:FindPath(t.pos_x,t.pos_y)
-		            Sleep(interval)
+		    Sleep(interval)
                     bots[1]:WrenchTile(t.pos_x,t.pos_y)
                     Sleep(1000)
                 end
             end
         end
         bots[1]:FindPath(tile[1].x,tile[1].y)
-	    Sleep(interval)
+	Sleep(interval)
 
         while amount(880) > 0 do
             bots[1]:PlaceTile(tile[1].x-1,tile[1].y,880)
@@ -82,14 +82,14 @@ RunThread(function()
         
         for i = -2, -(left+1), -1 do
             bots[1]:FindPath(tile[1].x+i,tile[1].y)
-	        Sleep(interval)
+	    Sleep(interval)
             bots[1]:HitTile(tile[1].x+i,tile[1].y)
             Sleep(200)
         end
 
         for i = -(left+1), -2 do
             bots[1]:FindPath(tile[1].x+i,tile[1].y)
-	        Sleep(interval)
+	    Sleep(interval)
             bots[1]:PlaceTile(tile[1].x+i,tile[1].y,881)
             Sleep(200)
         end
@@ -98,7 +98,7 @@ RunThread(function()
             for _,t in pairs(bots[1]:GetWorld():GetTiles()) do
                 if t.fg == 4582 then
                     bots[1]:FindPath(t.pos_x,t.pos_y-1)
-		            Sleep(interval)
+		    Sleep(interval)
                     bots[1]:PlaceTile(t.pos_x,t.pos_y,880)
                     Sleep(1000)
                 end
@@ -106,7 +106,7 @@ RunThread(function()
             for _,t in pairs(bots[1]:GetWorld():GetTiles()) do
                 if t.fg == 2978 then
                     bots[1]:FindPath(t.pos_x,t.pos_y)
-		            Sleep(interval)
+		    Sleep(interval)
                     bots[1]:WrenchTile(t.pos_x,t.pos_y)
                     Sleep(1000)
                 end
@@ -114,7 +114,7 @@ RunThread(function()
         end
 
         bots[1]:FindPath(tile[1].x,tile[1].y)
-	    Sleep(interval)
+	Sleep(interval)
 
         while amount(880) > 0 do
             bots[1]:PlaceTile(tile[1].x-1,tile[1].y,880)
@@ -133,14 +133,14 @@ RunThread(function()
 
         for i = 2, right+1 do
             bots[1]:FindPath(tile[1].x+i,tile[1].y)
-	        Sleep(interval)
+	    Sleep(interval)
             bots[1]:HitTile(tile[1].x+i,tile[1].y)
             Sleep(200)
         end
 
         for i = right+1, 2, -1 do
             bots[1]:FindPath(tile[1].x+i,tile[1].y)
-	        Sleep(interval)
+	    Sleep(interval)
             bots[1]:PlaceTile(tile[1].x+i,tile[1].y,881)
             Sleep(200)
         end
